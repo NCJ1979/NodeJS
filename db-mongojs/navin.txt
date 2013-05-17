@@ -272,4 +272,5 @@ MAPREDUCE
 		reducedVal.avg = reducedVal.qty/reducedVal.count;
 		return reducedVal;
 	};
-				
+
+=====================github -- check if this is saved ================================	
