@@ -1,0 +1,122 @@
+Node has a simple module loading system. 
+
+To export an object, add to the special exports object. 	eg; circle.js
+
+Cycles:
+========================================
+
+a.js: 
+console.log('a starting');
+exports.done = false;
+var b = require('./b.js');
+console.log('in a, b.done = %j', b.done);
+exports.done = true;
+console.log('a done');
+
+b.js: 
+console.log('b starting');
+exports.done = false;
+var a = require('./a.js');						[In order to prevent an infinite loop an unfinished copy of the a.js exports object is returned]
+console.log('in b, a.done = %j', a.done);
+exports.done = true;
+console.log('b done');
+
+main.js: 
+console.log('main starting');
+var a = require('./a.js');
+var b = require('./b.js');
+console.log('in main, a.done=%j, b.done=%j', a.done, b.done);
+
+$ node main.js
+main starting
+a starting
+b starting
+in b, a.done = false
+b done
+in a, b.done = true
+a done
+in main, a.done=true, b.done=true
+
+Core Modules: The core modules are defined in node's source in the lib/ folder. 
+File Modules: If the exact filename is not found, extension of .js, .json, and then .node will be attempted!!!!
+	A module prefixed with '/' is an absolute path to the file. 
+	A module prefixed with './' is relative to the file calling require().
+	
+	
+Loading from node_modules Folders
+========================================
+If the module identifier passed to require() is not a native module, and does not begin with '/', '../', or './', then node starts at the parent directory of the current module, and adds /node_modules.
+
+For example, if the file at '/home/ry/projects/foo.js' called require('bar.js'), then node would look in the following locations, in this order: 
+
+•/home/ry/projects/node_modules/bar.js
+•/home/ry/node_modules/bar.js
+•/home/node_modules/bar.js
+•/node_modules/bar.js
+
+===================================================================
+
+The module Object
+The module free variable is a reference to the object representing the current module. 
+module.exports is the same as the exports object.
+module isn't actually a global but rather local to each module. 	[[private static final long serialVersionUID = 1;]]
+
+module.exports
+The exports object is created by the Module system.
+Sometimes this is not acceptable, many want their module to be an instance of some class. To do this assign the desired export object to module.exports.
+
+require() SIMPLY RETURNS THE exports OF A MODULE.
+
+The module.require method provides a way to load a module as if require() was called from the original module. 
+But how to get module object.  ITS LOCAL WITHIN A MODULES.  SO USE, exports TO EXPLICITY EXPORT THE MODULE REFERENCE.
+
+===================================================================
+
+module.id	- Typically this is the fully resolved filename
+module.filename - The fully resolved filename to the module
+module.loaded - Whether or not the module is done loading, or is in the process of loading
+module.parent - The module that required this one
+module.children -  module objects required by this one
+
+===================================================================
+require(x)
+
+require(X) from module at path Y
+1. If X is a core module,
+   a. return the core module
+   b. STOP
+2. If X begins with './' or '/' or '../'
+   a. LOAD_AS_FILE(Y + X)
+   b. LOAD_AS_DIRECTORY(Y + X)
+3. LOAD_NODE_MODULES(X, dirname(Y))
+4. THROW "not found"
+
+===================================================================
+Accessing the main module
+
+When a file is run directly from Node, require.main is set to its module.
+For a file foo.js, (require.main === module) will be true if run via node foo.js, but false if run by require('./foo'). 
+
+===================================================================
+Loading from the global folders
+
+NODE_PATH environment variable is set to a SEMIcolon-delimited list of absolute paths, then node will search those paths for modules if they are not found elsewhere.
+
+Additionally, node will search in the following locations: 	[[NOT RECOMMENDED; USED FOR HISTORICAL REASONS]]
+
+•1: $HOME/.node_modules
+•2: $HOME/.node_libraries
+•3: $PREFIX/lib/node
+
+===================================================================
+Addenda: Package Manager Tips
+
+Below we give a suggested directory structure that could work:  /usr/lib/node/<some-package>/<some-version>
+
+•/usr/lib/node/foo/1.2.3/ - Contents of the foo package, version 1.2.3.
+•/usr/lib/node/bar/4.3.2/ - Contents of the bar package that foo depends on.
+•/usr/lib/node/foo/1.2.3/node_modules/bar - Symbolic link to /usr/lib/node/bar/4.3.2/.
+•/usr/lib/node/bar/4.3.2/node_modules/* - Symbolic links to the packages that bar depends on.
+
+
+

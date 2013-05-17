@@ -1,0 +1,27 @@
+Socket.IO uses WebSockets when it can. 
+
+Avoid using WebSockets directly unless you are very familiar with what environments they don't work and you are capable of working around those limitations.
+
+It provides failovers to other protocols in the event that WebSockets are not supported on the browser or server. 
+
+http://davidwalsh.name/websocket
+
+Socket.IO simplifies the WebSocket API and unifies the APIs of its fallback transports. Transports include:
+
+1. WebSocket
+2. Flash Socket
+3. AJAX long-polling
+4. AJAX multipart streaming
+5. IFrame
+6. JSONP polling
+You may set any of the Socket.IO instance's options with a second argument to the constructor. Options include:
+
+.port - the port to connect to
+.transports - an array containing the different transport types in order by preference []
+.transportOptions - an object with additional properties to pass to the transport
+
+
+THIS ABSTRACTS THE FALL BACK MECHANISM.  ANOTHER EXAMPLE OF HOW DEV COMMUNITY RACES AHEAD WHILE
+SPEC/STANDARDS CATCH UP.
+
+FIRST EXAMPLE IS JADE...WHERE HTML ITSELF IS WRAPPED.

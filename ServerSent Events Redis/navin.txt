@@ -1,0 +1,13 @@
+THIS APPLICATION USERS REDIS.
+
+WHAT IS REDIS?
+http://geekswithblogs.net/shaunxu/archive/2012/04/27/redis-on-windows.aspx
+
+Redis is a very powerful tool that can be used widely in building 
+especially a large scaling system, as a distributed cache, NoSQL and message queue.
+
+Linux and OSX are the two operating systems where Redis is developed and more tested.
+The Windows version need Visual Studio to complile and generate the exe to start the redis server.
+
+Without Redis, our examples cannot be tested.
+

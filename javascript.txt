@@ -1,0 +1,9 @@
+http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/
+
+JavaScript
+
+If You Don’t Declare Your Local Variables, Trouble is Nigh
+Always declare your local variables before you use them. 
+In fact, you should use JSHint to check your code for syntax errors and style guides. 
+
+All variables declared outside a function are in the global scope.

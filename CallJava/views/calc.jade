@@ -1,0 +1,35 @@
+extend layout
+
+//A block is simply a "block" of Jade that may be replaced within a child template, 
+//this process is recursive. 
+//To activate template inheritance in Express 2.x you must add: app.set('view options', { layout: false });
+
+//block scriptincludes
+//  script(src='/scripts/ajaxbridge.js')
+
+block contentsss navin
+  p
+    | Calculator
+  label Operand1: 
+    textarea(id='operand1',name='operand1',rows='5',cols='30') 0
+  p
+    select(id='operator',name='operator')
+      option(value='MUL')*
+      option(value='ADD')+
+  p  
+    label Operand2:
+    textarea(id='operand2',name='operand2',rows='5',cols='30') 0
+  p
+  p  
+    label Result:
+    textarea(id='result',name='result',rows='5',cols='30') 0
+    |
+    label Socket Info:
+    div(id='socketinfo')
+   
+block sidebar
+  .widget
+    h1 Widget
+    p
+      | Testing...
+

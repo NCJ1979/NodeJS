@@ -1,0 +1,14 @@
+{
+     "name": "call_java",
+     "description": "example application to call java",
+     "version": "0.0.1",
+     "dependencies": {
+        "express": "3.0.0alpha4",
+		"jade": ">= 0.0.1",
+        "socket.io": "0.8.4",
+		"stylus": "*",
+		"nib": "*"
+     }
+}
+
+

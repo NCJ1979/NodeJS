@@ -1,0 +1,13 @@
+//http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
+
+{
+  "name": "MyFirstApp",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "3.0.0alpha4",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*"
+  }
+}

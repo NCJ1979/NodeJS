@@ -1,0 +1,38 @@
+extend layout
+
+//A block is simply a "block" of Jade that may be replaced within a child template, 
+//this process is recursive. 
+//To activate template inheritance in Express 2.x you must add: app.set('view options', { layout: false });
+
+block contentsss navin
+  p
+    | Vivamus hendrerit arcu sed erat molestie
+    | vehicula. Sed auctor neque eu tellus
+    | rhoncus ut eleifend nibh porttitor. Ut in. navin
+  p
+    | Donec congue lacinia dui, a porttitor
+    | lectus condimentum laoreet. Nunc eu
+    | ullamcorper orci. Quisque eget odio ac
+    | lectus vestibulum faucibus eget in metus.
+    | In pellentesque faucibus vestibulum. Nulla
+    | at nulla justo, eget luctus tortor.
+    | chandar
+  label Username: 
+    input(type='text')
+    input(type='checkbox')
+    |
+    a(href='/login', title='View login page') Login
+     br
+     br	 
+    a(href='/features', title='View login page') Features	
+    
+block sidebar
+  .widget
+    h1 Widget
+    p
+      | Sed auctor neque eu tellus rhoncus ut
+      | eleifend nibh porttitor. Ut in nulla enim.
+    p
+      | Vivamus hendrerit arcu sed erat molestie
+      | vehicula.
+

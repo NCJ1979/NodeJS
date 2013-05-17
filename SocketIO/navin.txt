@@ -1,0 +1,40 @@
+Socket.IO aims to make realtime apps possible in every browser and mobile device, 
+blurring the differences between the different transport mechanisms. 
+It's care-free realtime 100% in JavaScript. 
+
+ON THE SERVER SIDE
+
+io.sockets.on('connection', function (socket) {
+
+	// when the client emits 'sendchat', this listens and executes
+	socket.on('EVENT1', function (data) {
+		// we tell the client to execute 'updatechat' with 2 parameters
+		io.sockets.emit('updatechat', socket.username, data);
+	});
+
+	// when the client emits 'sendchat', this listens and executes
+	socket.on('EVENT2', function (data) {
+		// we tell the client to execute 'updatechat' with 2 parameters
+		io.sockets.emit('updatechat', socket.username, data);
+	});
+
+}
+
+
+ON THE CLIENT SIDE
+
+var socket = io.connect('http://localhost:8080');
+
+// on connection to server, ask for user's name with an anonymous callback
+socket.on('connect', function(){
+	// call the server-side function 'adduser' and send one parameter (value of prompt)
+	socket.emit('EVENT1', prompt("What's your name?"));
+	
+	socket.emit('EVENT2', prompt("What's your name?"));
+});
+
+
+Broadcasting messages.
+To broadcast, simply add a `broadcast` flag to `emit` and `send` method calls. 
+Broadcasting means sending a message to everyone else except for the socket that starts it.
+

@@ -1,0 +1,275 @@
+mongojs now compiles fine after MS Visual Studio Express was installed.
+A bunch of warnings is shown however.
+
+==============
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(179): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(184): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(184): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+C:\Program Files\Microsoft Visual Studio 10.0\VC\include\xlocale(323): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify
+ /EHsc [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxp
+roj]
+C:\Program Files\Microsoft Visual Studio 10.0\VC\include\xlocale(323): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify
+ /EHsc [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\build\bson.vcxproj]
+C:\Program Files\Microsoft Visual Studio 10.0\VC\include\xlocale(323): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify
+ /EHsc [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxp
+roj]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(218): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(218): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(179): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(179): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+  security_buffer_descriptor.cc
+  security_context.cc
+C:\Program Files\Microsoft Visual Studio 10.0\VC\include\xlocale(323): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify
+ /EHsc [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxp
+roj]
+C:\Program Files\Microsoft Visual Studio 10.0\VC\include\xlocale(323): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify
+ /EHsc [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxp
+roj]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(218): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(218): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(179): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(179): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\
+build\kerberos.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+..\ext\bson.cc(547): warning C4244: 'argument' : conversion from 'int64_t' to 'double', possible loss of data [C:\Documents and Settings\xecc1mz\Desktop\Deskto
+p\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\build\bson.vcxproj]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(184): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\buil
+d\bson.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+C:\Documents and Settings\xecc1mz\.node-gyp\0.10.4\deps\v8\include\v8.h(184): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persisten
+t<T>::New(v8::Handle<T>)' [C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\buil
+d\bson.vcxproj]
+          with
+          [
+              T=v8::FunctionTemplate
+          ]
+  kerberos_sspi.c
+  base64.c
+     Creating library C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\build\Rel
+     Creating library C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build
+  ease\bson.lib and object C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\buil
+  \Release\kerberos.lib and object C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\k
+  d\Release\bson.exp
+  erberos\build\Release\kerberos.exp
+  Generating code
+  Generating code
+  Finished generating code
+  Finished generating code
+  bson.vcxproj -> C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\bson\build\Release
+  \\bson.node
+  kerberos.vcxproj -> C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\node_modules\mongojs\node_modules\mongodb\node_modules\kerberos\build
+  \Release\\kerberos.node
+mongojs@0.7.5 node_modules\mongojs
++-- thunky@0.1.0
++-- readable-stream@1.0.2
++-- mongodb@1.3.4 (bson@0.1.8, kerberos@0.0.2)
+
+==============
+INSTALLING MONGODB ON WINDOWS.
+
+C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\bin>mongod --config "C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\mongo.config"
+
+Install as a service:
+C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\bin>mongod --config "C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\mongo.config" --install
+
+mongod --remove		[[REMOVE THE SERVICE]]
+
+create data and log directories.
+
+http://localhost:28017/ -- web administration
+27017 -- This is the default port for mongod and mongos instances
+
+http://docs.mongodb.org/manual/reference/mongo-shell/
+
+====================================================================================
+##store data here
+dbpath=C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\data
+ 
+##all output go here
+logpath=C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\log\mongo.log
+ 
+##log read and write operations
+diaglog=3
+====================================================================================
+
+db.addUser('system','navin')
+show users
+{
+        "_id" : ObjectId("5192ae670ba884b26fc135ba"),
+        "user" : "system",
+        "readOnly" : false,
+        "pwd" : "52d72457f85dfa231e57a12f1446ecc4"
+}
+
+use test [SWITCH DB TO test; db variable will hold the current database reference]
+
+show collections [[PRINTS ALL COLLECTIONS IN CURRENT DB]]
+
+db.navinproducts.insert( { item: "card", qty: 15 } )
+db.navinproducts.find()
+db.navinproducts.find( { item: "card"} )d
+
+
+mongoimport --db test --collection climatedata --type csv --file "C:\Documents and Settings\xecc1mz\Desktop\Desktop\MongoDB\mongodb-win32-i386-2.4.3\importdata\CLIMATE.csv" --fields datetime,pressure,rainfall,windspeed,winddirection,temperature,relativehumidity,solarflux,battery
+
+ARITHMETIC OPERATORS:
+================================
+db.climatedata.find({pressure:991});
+db.climatedata.find({pressure:{$gt:991}});
+db.climatedata.find({pressure:{$lt:991}});
+db.climatedata.find({pressure:{$ne:991}});		!= NOT EQUALS
+
+SELECT LIMITED COLUMNS
+db.climatedata.find({pressure:991},{datetime:1, battery:1, _id:1});
+
+LOGICAL OPERATORS:
+================================
+================================
+AND CONDITION
+db.climatedata.find({pressure:991, relativehumidity:73.3});
+
+OR CONDITION
+db.climatedata.find({$or:[{pressure:991, relativehumidity:73.3}]});		WHERE (PRESSURE=991 AND RH=73.3)
+db.climatedata.find({$or:[{pressure:991}, {relativehumidity:73.3}]});		WHERE (PRESSURE=991) OR (RH=73.3)
+
+LIKE % CONDITION
+db.climatedata.find({windspeed:/99/});
+
+UPDATE - 3 ARGS.  1: WHERE CONDITIONS	2. COLUMNS TO UPDATE  3. MULTI-UPDATE FLAG
+db.climatedata.find({temperature:6.346});
+db.climatedata.update({temperature:6.346}, {$set:{rainfall:1, windspeed:6.000}}, {multi:true});	
+//multi:false is false by default, will update first record
+
+db.climatedata.update({temperature:6.346}, {$set:{rainfall:1, windspeed:6.000}, $inc:{solarflux:3}}, {multi:true});	
+
+$set =
+$inc +
+$dec -		[[NO SUCH OPERATOR, INSTEAD USE NEGATION]]
+
+db.currentOp()		CURRENT OPERATION
+db.records.find( { a: 1 } ).explain()		QUERY PLAN
+
+
+MAPREDUCE
+============================================================================================================
+1. Define map fn.
+	var mapFn = function() 
+		{
+			emit(this.pressure, this.rainfaill);
+		};
+
+2. Define reduce fn.	[[IDEMPOTENT FUNCTION]]
+	var reduceRn = function(key, values)
+		{
+			return Array.sum(values);
+		};
+
+3. Invoke on a collection:
+
+	db.test.climatedata.mapreduce(
+		mapFn,
+		reduceFn,
+		{
+			out: "climatedataresults"
+		}
+		);
+
+	(a) Put everything in a js file and invoke - 
+			mongo "C:\Documents and Settings\xecc1mz\Desktop\Desktop\NodeJS\db-mongojs\mongoshell.js"
+
+4. Results
+		The output is available in the collection specified...accessible via:
+		
+			db.climatedataresults.find().forEach(function(mydoc)
+				{
+					print('Record#' + JSON.stringify(mydoc));
+				}
+			);
+
+5. Extensions / Options
+
+	{
+		out: "collectionname",		-- output collection
+		
+		query: { 	
+					ord_date: { $gt: new Date(’01/01/2012’) }		-- query to select records from collection instead of whole collection
+				},
+		
+		finalize: finalizeFunc2			-- takes 2 args; reduce 'key' + reduce return value.
+	
+	}
+
+	var finalizeFunc2 = function (key, reducedVal) 
+	{
+		reducedVal.avg = reducedVal.qty/reducedVal.count;
+		return reducedVal;
+	};
+				

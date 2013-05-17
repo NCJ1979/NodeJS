@@ -1,0 +1,19 @@
+node-gyp is a cross-platform command-line tool written in Node.js for 
+compiling native addon modules for Node.js, which takes away the pain 
+of dealing with the various differences in build platforms. 
+It is the replacement to the node-waf program which is removed for node v0.8.
+
+THAT MEANS, WHEN YOU INSTALL A MODULE WHICH HAS NATIVE LIBS, NODE-GYP KICKS
+IN TO ENSURE THE LIB IS COMPILED FOR THE PLATFORM.
+
+c:\data\program files\nodejs\nodevars.bat
+
+It sets the following lines to include node-gyp which is in app-data DIR to the SYSTEM PATH.
+
+rem Ensure this Node.js and npm are first in the PATH
+set PATH=%APPDATA%\npm;%~dp0;%PATH%
+
+
+
+npm install -g node-gyp@latest		[INSTALL NODE-GYP GLOBALLY (APP DATA DIR) ]
+

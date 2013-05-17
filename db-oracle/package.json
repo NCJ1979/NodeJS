@@ -1,0 +1,10 @@
+{
+     "name": "oracle-test",
+     "description": "example application to call oracle",
+     "version": "0.0.1",
+     "dependencies": {
+        "db-oracle": "*"
+     }
+}
+
+

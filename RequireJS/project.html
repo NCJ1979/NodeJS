@@ -1,0 +1,64 @@
+
+<!--
+	NO MATTER HOW WE MODULARIZE JS, AS LONG AS IT IS IN ONE FILE, IT WILL STILL BE DOWNLOADED.  SO FIRST, WE NEED TO BREAK INTO FILES.
+	SECOND, AFTER BREAKING INTO FILES, DEFINE ITS RELATIONSHIP WITH OTHER MODULES USING define(), WHICH IS PROBABLY THE ONLY GLOGAL DEFINITION.
+	
+	CALLERS, WILL USE require() TO INVOKE MODULES AND PROCEED.  REQUIREJS WILL INTURN LOAD MODULES/DEPENDENCIES IN THE RIGHT ORDER FROM
+	VARIOUS JS FILES.  THIS IS THE CRUX OF THE REQUIREJS / ASYNCHRONOUS MODULE DEFINITION. (AMD)
+
+
+	RequireJS also assumes by default that all dependencies are scripts.  So it does not expect to see a trailing ".js"
+	
+	1. What is the max number of module defintions per file?
+		There should only be ONE module definition per file on disk.  -- define()
+		
+	2. Is there any difference between the top-level require call and a require call within a define( )?
+		 The top-level require has a signature require(['module'], function(module) {} );
+		 
+		 The require inside a define() would have var a = require('modA');
+			But, make sure require and modA are defined as dependencies.  
+			eg; define(['require', 'modA'], function(require)
+					{
+						var modA = require('modA');
+					}
+				);
+				
+	3. What happens in the following case:
+			eg; define(['require'], function(require)
+					{
+						var modA = require('modA');
+					}
+				);
+	
+		If fails, because, IF YOU PASS DEPENDENCIES ARRAY, THEN WE ARE HARD-CODING ALL THE DEPENDENCIES.  TO FIX IT, DO THE FOLLOWING:
+		
+				define(function(require)
+					{
+						var modA = require('modA');
+					}
+				);
+		
+	4. 
+-->
+
+<html>
+
+<head>
+
+	 <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+
+	<script data-main="scripts/main" src="scripts/require.js"></script>
+	
+	<script>
+		
+		//alert(require);
+	
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

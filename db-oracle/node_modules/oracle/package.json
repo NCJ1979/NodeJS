@@ -1,0 +1,32 @@
+{
+  "name": "oracle",
+  "description": "Oracle database driver",
+  "keywords": ["database", "db", "oracle"],
+  "homepage": "https://github.com/nearinfinity/node-oracle",
+  "version": "0.3.0",
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "maintainers": [
+    {
+      "name": "Joe Ferner",
+      "email": "joe@fernsroth.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/nearinfinity/node-oracle/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nearinfinity/node-oracle.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nodeunit": "~>0.8.0"
+  },
+  "scripts": {
+    "test": "nodeunit test/integration.js test/outparams.js"
+  },
+  "main": "./index.js"
+}
