@@ -8,7 +8,8 @@
 	config.paths = {             
 		'vendor' : '../../test/vendor',             
 		'root' : '../..',             
-		'examples' : '..'        
+		'examples' : '..',
+		'myscripts':'./scripts'
 	};           
 	
 	underscore = require({ context : 'underscore' });     
@@ -19,9 +20,9 @@
 		window._ = _; // move underscore to global namespace for backbone          
 		bootstrap([	'vendor/json2', 
 					'order!vendor/jquery-1.6.4', 
-					'order!root/backbone',              
+					'order!myscripts/backbone',              
 					'order!examples/backbone-localstorage', 
-					'order!todos.js'], function (a, b, c, d, app) 
+					'order!myscripts/todos.js'], function (a, b, c, d, app) 
 						{             
 							app.init();                         
 						});

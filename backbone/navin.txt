@@ -1,0 +1,17 @@
+It's all too easy to create JavaScript applications that end up as 
+tangled piles of jQuery selectors and callbacks, all trying frantically to keep 
+data in sync between the HTML UI, your JavaScript logic, and the database on your server. 
+
+(MVC)
+
+Models:			Created, validated, destroyed, and saved to the server.
+Collections:
+Views:			Display the model's data are notified of the event, causing them to re-render
+
+
+You don't have to write the glue code that looks into the DOM to find an element with a specific id, 
+and update the HTML manually — when the model changes, the views simply update themselves.
+
+==========================================================================================
+
+

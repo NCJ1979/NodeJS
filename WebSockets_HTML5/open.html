@@ -1,0 +1,11 @@
+<script>
+
+	var myWebSocket = new WebSocket("ws://www.websockets.org");
+	myWebSocket.onopen = function(evt) { alert("Connection open ..."); };
+	myWebSocket.onmessage = function(evt) { alert( "Received Message: " + evt.data); };
+	myWebSocket.onclose = function(evt) { alert("Connection closed."); };
+	myWebSocket.send("Hello WebSockets!");
+	myWebSocket.close();
+
+
+</script>

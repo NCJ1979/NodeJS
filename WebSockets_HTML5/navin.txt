@@ -1,0 +1,48 @@
+HTTP wasn't designed for real-time, full-duplex communication.
+WEBSockets represents a colossal advance, especially for real-time, event-driven web applications.
+A full-duplex, bidirectional communications channel that operates through a SINGLE socket over the Web. [[full-duplex TCP connection]]
+
+http://www.jcp.org/en/jsr/detail?id=356
+TRYING TO FIND JAVA IMPLEMENTATIONS OF JSR356
+
+http://tomcat.apache.org/tomcat-7.0-doc/api/index.html?org/apache/catalina/websocket/package-summary.html
+Some impl available here...but not until JSR356 is completed.
+
+ Google's Ian Hickson—the HTML5 specification lead—to say:
+
+"Reducing kilobytes of data to 2 bytes…and reducing latency from 150ms to 50ms is far more than marginal. In fact, these two factors alone are enough to make Web Sockets seriously interesting to Google."
+
+http://www.websocket.org/quantum.html
+
+TO ACHIEVE REAL TIME COMMUNICATION:
+
+Comet, which delays the completion of an HTTP response to deliver messages to the client. Comet-based push is generally implemented in JavaScript and uses connection strategies such as long-polling or streaming.
+
+POLLING:
+The browser sends HTTP requests at regular intervals and immediately receives a response. 
+Pros: Works fine if the message availability time interval is known.
+Cons: Many connections are opened and closed needlessly in low-message-rate situations.
+
+LONG POLLING:
+The browser sends a request to the server and the server keeps the request open for a set period.
+If a notification is received within that period, a response containing the message is sent to the client. Else, the server sends a response to terminate the open request.
+Pros:
+Cons: Might spin out of control into an unthrottled, continuous loop of immediate polls.
+
+
+STREAMING:  HTTP server push (also known as HTTP streaming) 
+The browser sends a complete request, but the server sends and maintains an open response that is continuously updated and kept open indefinitely (or for a set period of time). HTTP RESPONSE IS NOT ENDED!
+Pro: 
+Con: Since, its HTTP, intervening firewalls and proxy servers may choose to buffer the response, 
+increasing the latency of the message delivery.
+*Many streaming Comet solutions fall back to long-polling in case a buffering proxy server is detected.
+
+==================================================================================================================
+Make sure WebSockets are closed when browser is closed.
+
+window.onbeforeunload = function() {
+    websocket.onclose = function () {}; // disable onclose handler first
+    websocket.close()
+};
+
+==================================================================================================================
